@@ -219,3 +219,4 @@ __marimo__/
 
 .vscode
 viz_out
+*.pt
