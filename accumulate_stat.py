@@ -44,7 +44,7 @@ def on_slice(events: dv.EventStore):
         0.8,
         (0, 255, 0),
         2,
-        cv.LINE_AA,
+        cv.LINE_AA,pe
     )
 
     cv.putText(
