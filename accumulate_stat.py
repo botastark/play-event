@@ -24,6 +24,7 @@ accumulator.setSynchronousDecay(False)
 slicer = dv.EventStreamSlicer()
 cv.namedWindow("Accumulated Events", cv.WINDOW_NORMAL)
 
+
 def on_slice(events: dv.EventStore):
     if events is None or events.size() == 0:
         return
@@ -44,7 +45,7 @@ def on_slice(events: dv.EventStore):
         0.8,
         (0, 255, 0),
         2,
-        cv.LINE_AA,pe
+        cv.LINE_AA,
     )
 
     cv.putText(
@@ -71,6 +72,7 @@ def on_slice(events: dv.EventStore):
 
     cv.imshow("Accumulated Events", image)
     cv.waitKey(1)
+
 
 slicer.doEveryTimeInterval(timedelta(milliseconds=33), on_slice)
 

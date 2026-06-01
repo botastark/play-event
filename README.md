@@ -18,7 +18,8 @@ The viewer can be launched on Linux with:
 The script mirrors the original Windows bat command and uses:
 
 ```bash
-java --enable-native-access=ALL-UNNAMED -jar /home/bota/Desktop/SNN-Example/viewPSGX320.jar
+ /usr/lib/jvm/java-25-openjdk-amd64/bin/java   --enable-native-access=ALL-UNNAMED   -jar /home/bota/Desktop/SNN-Example/viewPSGX320.jar
+# java --enable-native-access=ALL-UNNAMED -jar /home/bota/Desktop/SNN-Example/viewPSGX320.jar
 ```
 
 ### Java version requirement
@@ -30,10 +31,9 @@ If you see `UnsupportedClassVersionError`, install a newer runtime:
 sudo apt install openjdk-25-jre
 ```
 
-## Basic SNN Tip Tracking (Recommended)
+## Basic SNN Tip Tracking
 
-For pen-tip tracking, treat `pen1` and `pen2` as the same object and train a
-regression model that predicts tip coordinates `(x, y)`.
+For pen-tip tracking, train a regression model that predicts tip coordinates `(x, y)`.
 
 ### 1) Generate model-based pseudo labels (good-enough GT)
 
